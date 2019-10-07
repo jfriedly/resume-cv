@@ -129,8 +129,8 @@
 
 %%%% PAGES 2--9 NUMBERING:
 %% These two lines put page number in upper-right corner of pages 2--end
-\rhead{Pavlic, p.~\arabic{page} of \protect\pageref*{LastPage}}   % +LP
-%\rhead{Pavlic, p.~\arabic{page}}                                 % -LP
+\rhead{Friedly, p.~\arabic{page} of \protect\pageref*{LastPage}}   % +LP
+%\rhead{Friedly, p.~\arabic{page}}                                 % -LP
 
 %% These lines put page number in bottom (center) of pages 2--end
 %\lfoot{\hspace{\footpageshift}%
@@ -290,16 +290,16 @@ Santa Clara, CA 95050  & \textit{GitHub:} \href{https://github.com/jfriedly}{htt
 
 \section{\textbf{Objective}}
 
-Mid-level software engineering position in an infrastructure services organization.
+Mid-level back-end development career position.
 \blankline
 
 \section{\textbf{Abilities}}
 
 \begin{loneinnerlist}
     \item Competent programmer in Java and Python, and some familiarity with C and C++.
-    \item Responsible operator trusted to "figure out what's wrong and fix it" in production at both of my last two companies.
-    \item Understand concepts of distributed consensus, cluster scheduling, data flow \linebreak analysis, query optimization, and principles of API planning.
-    \item Eager to learn:  have recently been learning architectural principles of a distributed storage system.  In the past, graduated valedictorian from high school, graduated college in three years, and wrote an \href{https://github.com/jfriedly/my-lisp}{implementation of Lisp} as a learning project.
+    \item Responsible operator trusted to "figure out what's wrong and fix it" in production.
+    % I used to have a note in here about understanding concepts of distributed consensus, cluster scheduling, data flow analysis, query optimization, and principles of API planning.  I think I'm so rusty on most of that stuff that it would do more harm than good on my resume.  New topics though...?
+    \item Eager to learn:  personal projects include a three-month physics internship at \href{http://alpha.web.cern.ch/}{CERN} during a sabbatical, \href{https://github.com/jfriedly/k-and-r}{publishing} answers to the programming exercises in \href{https://en.wikipedia.org/wiki/The_C_Programming_Language}{K \& R}, and writing an educational \href{https://github.com/jfriedly/my-lisp}{implementation of Lisp}.
     \item Can speak to customers, build rapport, and write user-facing documentation.
 \end{loneinnerlist}
 \blankline
@@ -307,10 +307,9 @@ Mid-level software engineering position in an infrastructure services organizati
 \section{\textbf{Experience}}
 
 \begin{loneinnerlist}
-    \item Have been the senior on-call engineer for a 300-server \href{https://en.wikipedia.org/wiki/Object_storage}{object store}.
+    \item Second engineer on an \href{https://en.wikipedia.org/wiki/Object_storage}{object store} that has grown to tens of petabytes; am currently the longest-serving engineer in the organization (approx. 50 engineers).
     \item Have worked on both data plane and control plane infrastructure services.
-    % FIXME(jfriedly):  Had to manually hyphenate infrastructure below to make the line wrap properly.  If you change the content, remove the broken hyphenation.
-    \item Have developed software throughout the stack:  machine image creation, \href{http://en.wikipedia.org/wiki/Preboot_Execution_Environment}{PXE} \linebreak \href{http://en.wikipedia.org/wiki/Preboot_Execution_Environment}{booting}, custom \href{http://en.wikipedia.org/wiki/Initramfs}{initramfs}, \href{http://upstart.ubuntu.com/}{Upstart} jobs, database management, \href{http://en.wikipedia.org/wiki/Representational_state_transfer}{RESTful} infra-structure services, and standard website development.
+    \item Have developed software throughout much of the stack:  machine image creation, \href{http://en.wikipedia.org/wiki/Preboot_Execution_Environment}{PXE booting}, \href{http://upstart.ubuntu.com/}{Upstart} jobs, docker \href{https://docs.docker.com/glossary/?term=image}{images}, various \href{https://en.wikipedia.org/wiki/Infrastructure_as_a_service}{infrastructure services}, and standard website development (using \href{https://www.djangoproject.com/}{Django}).
     \item Experience with running both \href{http://www.ubuntu.com/server}{Ubuntu} and \href{https://www.centos.org/}{CentOS} on servers, and some familiarity with several other distributions.
 \end{loneinnerlist}
 \blankline
@@ -322,10 +321,11 @@ Have grown from being an intern web developer into a senior service author with 
 \begin{outerlist}
 \item[] \href{https://www.oracle.com/index.html}{\textbf{Oracle Corporation.}}, Santa Clara, CA \hfill{\textbf{May 2015 - present}}
     \begin{innerlist}
-    \item[] \textbf{Senior, Principal Member of the Technical Staff} on the Object Storage team
-    \item Original author of the web server frontend and perennial contributor later.
-    \item Solely responsible for the feature set currently bringing in the majority of the service's revenue, \href{https://www.oracle.com/database/index.html}{Oracle DB} backups to Swift.  Implemented the \href{https://github.com/openstack/swift}{Swift API}, taught myself how to use \href{http://www.oracle.com/technetwork/database/features/availability/rman-overview-096633.html}{RMAN}, thoroughly tested integration, and wrote the original documentation.
-    \item Responsible for metrics collection, display, and alarming.
+    \item[] \textbf{Senior (IC3), Principal (IC4) Member of the Technical Staff} on Object Storage
+    \item Designed and was tech lead for \href{https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm}{Object Lifecycle Management}, a microservice enabling automatic policy-based archival and deletion of data.  Currently processing $>$ 100K objects per second per host, with load average $<$ 2 on each host.
+    \item Bootstrapped object storage in our largest \href{https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm}{production region} (us-ashburn-1) with three data centers and now $>$ 1000 servers.
+    \item Integrated the service with our telemetry (metrics) system.  Built original dashboards and alarms, some still in use today.  Remain an active contributor.
+    \item Original author of the \href{http://en.wikipedia.org/wiki/Representational_state_transfer}{RESTful} web server front-end and one its compatibility APIs (\href{https://docs.openstack.org/api-ref/object-store/}{Swift}).  Frequent front-end contributor since.
     \end{innerlist}
 \end{outerlist}
 
